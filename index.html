@@ -3,315 +3,396 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vijai Varma | Data Analyst Portfolio</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Vijai Varma — Data Analytics Consultant. I build Power BI dashboards for F&B, Retail & D2C brands that turn scattered data into clear, automated business insights.">
+  <meta name="keywords" content="Power BI consultant, data analytics, dashboard developer, SQL Python analyst, business intelligence India">
+  <meta property="og:title" content="Vijai Varma | Data Analytics Consultant">
+  <meta property="og:description" content="I build Power BI dashboards that turn your business data into decisions. F&B · Retail · D2C.">
+  <meta property="og:url" content="https://vijaivarma.github.io/Portfolio">
+  <meta property="og:type" content="website">
 
-<link rel="stylesheet" href="style.css">
+  <title>Vijai Varma | Data Analytics Consultant</title>
 
-<!-- FontAwesome (Stable CDN) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Google Fonts — MUST be before style.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ============================================================
+     HEADER / HERO
+============================================================ -->
 
 <div id="header">
-<div class="container">
+  <div class="container">
 
-<nav>
+    <nav>
+      <img src="images/logo.png" class="logo" alt="Vijai Varma">
 
-<img src="images/logo.png" class="logo" alt="Logo">
+      <ul id="sidemenu">
+        <li><a href="#header" onclick="closemenu()">Home</a></li>
+        <li><a href="#about" onclick="closemenu()">About</a></li>
+        <li><a href="#services" onclick="closemenu()">Services</a></li>
+        <li><a href="#portfolio" onclick="closemenu()">Projects</a></li>
+        <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+        <i class="fas fa-times" onclick="closemenu()"></i>
+      </ul>
 
-<ul id="sidemenu">
-<li><a href="#header">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Expertise</a></li>
-<li><a href="#portfolio">Experience</a></li>
-<li><a href="#contact">Contact</a></li>
+      <i class="fas fa-bars" onclick="openmenu()"></i>
+    </nav>
 
-<i class="fas fa-times" onclick="closemenu()"></i>
+    <div class="header-text">
 
-</ul>
+      <p class="hero-tagline">Data Analytics Consultant &nbsp;·&nbsp; Power BI &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Python</p>
 
-<i class="fas fa-bars" onclick="openmenu()"></i>
+      <h1>Hi, I'm <span>Vijai Varma.</span><br>I turn data into<br>decisions that scale.</h1>
 
-</nav>
+      <p class="hero-sub">I build automated Power BI dashboards for F&B, Retail & D2C brands — so you stop guessing and start deciding.</p>
 
-<div class="header-text">
+      <div class="hero-btns">
+        <!-- IMPORTANT: Replace YOUR_CALENDLY_USERNAME with your actual Calendly URL -->
+        <a href="https://calendly.com/vijaivarma-dataanalyst/30min" target="_blank" class="btn btn-primary">
+          <i class="fas fa-calendar-alt"></i> Book a Free Call
+        </a>
+      </div>
 
-<p>Data & Business Analyst</p>
+    </div>
 
-<h1>Hi, I'm <span>Vijai varma</span><br>From India</h1>
-
-<a href="Vijai_varma_Data_Analyst.pdf" download class="btn btn2">
-View Resume
-</a>
-
+  </div>
 </div>
 
-</div>
-</div>
-
-<!-- ABOUT -->
+<!-- ============================================================
+     ABOUT
+============================================================ -->
 
 <div id="about">
+  <div class="container">
+    <div class="row">
 
-<div class="container">
+      <div class="about-col-1">
+        <img src="images/user.png" alt="Vijai Varma — Data Analytics Consultant">
+      </div>
 
-<div class="row">
+      <div class="about-col-2">
 
-<div class="about-col-1">
-<img src="images/user.png" alt="Vijai Varma">
+        <h1 class="sub-title">About Me</h1>
+
+        <p>
+          Most businesses are sitting on gold mines of data they never use. I fix that.<br><br>
+          I'm a Data Analytics Consultant, specializing in Power BI dashboards
+          that bring all your scattered data — POS exports, spreadsheets, CRM, ad platforms — into one
+          live, automated view. My dashboards answer the questions that matter:
+          <em>Which products are quietly killing margins? Which locations are underperforming?
+          Where is your ad spend actually working?</em>
+        </p>
+
+        <!-- FIX: pass event as first argument to opentab() -->
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+          <p class="tab-links" onclick="opentab(event, 'experience')">Projects</p>
+          <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+        </div>
+
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Power BI & DAX</span><br>Building interactive dashboards with custom KPIs, advanced DAX measures, and automated daily data refresh via Power BI Service.</li>
+            <li><span>SQL & Data Modeling</span><br>Writing complex queries, building star-schema data models, and connecting multiple data sources into a single source of truth.</li>
+            <li><span>Python for Analytics</span><br>Data cleaning with Pandas, automated PDF report generation, and scheduled data pipelines.</li>
+            <li><span>Excel & Power Query</span><br>Advanced Power Query transformations, pivot analysis, and data preparation for any source format.</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2025 · Power BI + DAX</span><br>Zomato Restaurant Analytics Dashboard — 9,551 restaurants, 15 countries, custom Value Score metric</li>
+            <li><span>2025 · Python + SQL</span><br>Swiss Job Market Demand Analysis — in-demand roles and skills trend analysis across industries</li>
+            <li><span>2025 · Python + Pandas</span><br>Swiss Tourism Trend Analysis — visitor patterns, seasonal forecasting, regional performance</li>
+            <li><span>2025 · Power BI</span><br>Adventure Works Business Dashboard — complete BI solution with revenue, product & customer analytics</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2024 · Anna University</span><br>B.E. Computer Science Engineering — First Class</li>
+            <li><span>2025 · Maven Analytics</span><br>Power BI Desktop — Business Intelligence Course (Udemy)</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="about-col-2">
+<!-- ============================================================
+     HOW I WORK — 4-step process
+============================================================ -->
 
-<h1 class="sub-title">About Me</h1>
+<div id="process">
+  <div class="container">
+    <h1 class="sub-title">How I Work</h1>
+    <p class="section-desc">From your first message to a live, automated dashboard — in 5 to 7 days.</p>
 
-<p>
-I am a Data & Business Analyst passionate about transforming raw data into meaningful insights that support better business decisions. 
-I specialize in analyzing datasets, identifying trends, and building dashboards using Excel, SQL, Python, and Power BI.
-My goal is to help organizations make data-driven decisions through clear analysis and visualization.
-</p>
+    <div class="process-grid">
 
-<div class="tab-titles">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <i class="fas fa-phone-alt"></i>
+        <h3>Free Discovery Call</h3>
+        <p>30 minutes. I understand your data, your business questions, and what insights will be most valuable to you.</p>
+      </div>
 
-<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <i class="fas fa-file-alt"></i>
+        <h3>Data Audit & Proposal</h3>
+        <p>I review your data and send a clear proposal — exactly what I'll build, timeline, and investment. Within 24 hours.</p>
+      </div>
 
-<p class="tab-links" onclick="opentab('experience')">Experience</p>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <i class="fas fa-chart-bar"></i>
+        <h3>Dashboard Build</h3>
+        <p>I build your dashboard in 5–7 days and send a mid-way preview so you can give early feedback before final delivery.</p>
+      </div>
 
-<p class="tab-links" onclick="opentab('education')">Education</p>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <i class="fas fa-rocket"></i>
+        <h3>Deliver & Automate</h3>
+        <p>Live link delivered. I walk you through every page and set up automated daily refresh — zero manual work from your team.</p>
+      </div>
 
+    </div>
+  </div>
 </div>
 
-<div class="tab-contents active-tab" id="skills">
-
-<ul>
-
-<li><span>Data Analysis</span><br>Analyzing datasets to identify trends and insights.</li>
-
-<li><span>Data Visualization</span><br>Creating dashboards using Power BI and Python.</li>
-
-<li><span>Business Analysis</span><br>Using data to support business decisions.</li>
-
-<li><span>Data Cleaning</span><br>Preparing datasets using Python, Excel, and SQL.</li>
-
-</ul>
-
-</div>
-
-<div class="tab-contents" id="experience">
-
-<ul>
-
-<li><span>2025</span><br>Swiss Job Market Demand Analysis</li>
-
-<li><span>2025</span><br>Swiss Tourism Trend Analysis</li>
-
-<li><span>2025</span><br>Power BI Business Dashboard</li>
-
-</ul>
-
-</div>
-
-<div class="tab-contents" id="education">
-
-<ul>
-
-<li><span>2024</span><br>B.E Computer Science</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- EXPERTISE -->
+<!-- ============================================================
+     SERVICES — with pricing
+============================================================ -->
 
 <div id="services">
+  <div class="container">
 
-<div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <p class="section-desc">Three clear ways to work together — pick what fits your business stage.</p>
 
-<h1 class="sub-title">My Expertise</h1>
+    <div class="services-list">
 
-<div class="services-list">
+      <div class="service-card">
+        <i class="fas fa-chart-bar"></i>
+        <h2>Starter Dashboard</h2>
+        <div class="service-price">₹25,000 <span>one-time</span></div>
+        <p>A complete 5-page interactive Power BI dashboard built on your actual data, delivered in 5–7 days with automated refresh.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> 5-page interactive dashboard</li>
+          <li><i class="fas fa-check"></i> Automated daily data refresh</li>
+          <li><i class="fas fa-check"></i> 2 revision rounds included</li>
+          <li><i class="fas fa-check"></i> 30-min handover walkthrough</li>
+        </ul>
+        <a href="https://calendly.com/vijaivarma-dataanalyst/30min" target="_blank" class="btn-service">Book a Call</a>
+      </div>
 
-<div>
+      <div class="service-card service-featured">
+        <div class="featured-tag">Most Popular</div>
+        <i class="fas fa-sync-alt"></i>
+        <h2>Monthly Retainer</h2>
+        <div class="service-price">₹15,000 <span>/ month</span></div>
+        <p>Your dashboard maintained and evolved as your business grows. Includes a weekly insights email written by me. Cancel anytime.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Dashboard maintenance & updates</li>
+          <li><i class="fas fa-check"></i> 1 new analysis added per month</li>
+          <li><i class="fas fa-check"></i> Weekly insights email summary</li>
+          <li><i class="fas fa-check"></i> Priority email support</li>
+        </ul>
+        <a href="https://calendly.com/vijaivarma-dataanalyst/30min" target="_blank" class="btn-service">Book a Call</a>
+      </div>
 
-<i class="fas fa-chart-line"></i>
+      <div class="service-card">
+        <i class="fas fa-search-dollar"></i>
+        <h2>Data Audit</h2>
+        <div class="service-price">₹8,000 <span>one-time</span></div>
+        <p>Not sure where to start? I audit your existing data setup, identify gaps and quick wins, and deliver a written action plan in 24 hours.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> 1-hour discovery session</li>
+          <li><i class="fas fa-check"></i> Data quality assessment</li>
+          <li><i class="fas fa-check"></i> Written recommendations report</li>
+          <li><i class="fas fa-check"></i> Quick-win opportunity list</li>
+        </ul>
+        <a href="https://calendly.com/vijaivarma-dataanalyst/30min" target="_blank" class="btn-service">Book a Call</a>
+      </div>
 
-<h2>Data Analysis</h2>
-
-<p>Cleaning, analyzing, and interpreting datasets to identify trends and insights.</p>
-
+    </div>
+  </div>
 </div>
 
-<div>
-
-<i class="fas fa-chart-bar"></i>
-
-<h2>Data Visualization</h2>
-
-<p>Building dashboards and visual reports using Power BI and Python.</p>
-
-</div>
-
-<div>
-
-<i class="fas fa-lightbulb"></i>
-
-<h2>Business Insights</h2>
-
-<p>Transforming data into actionable business insights.</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- PROJECTS -->
+<!-- ============================================================
+     PROJECTS
+     NOTE: Add images/work4.png (Zomato dashboard screenshot) to your images folder
+============================================================ -->
 
 <div id="portfolio">
+  <div class="container">
 
-<div class="container">
+    <h1 class="sub-title">My Projects</h1>
+    <p class="section-desc">Real data. Real insights. Built from scratch.</p>
 
-<h1 class="sub-title">Experience</h1>
+    <div class="work-list">
 
-<div class="work-list">
+      <!-- PROJECT 1: ZOMATO — Your flagship. Put this first. -->
+      <!-- ADD a screenshot of your Zomato dashboard as images/work4.png -->
+      <div class="work">
+        <img src="images/work4.png" alt="Zomato Restaurant Analytics Dashboard — Power BI">
+        <div class="layer">
+          <div class="project-tags">
+            <span>Power BI</span><span>DAX</span><span>Data Modeling</span>
+          </div>
+          <h3>Zomato Restaurant Analytics</h3>
+          <p>6-page Power BI dashboard analyzing 9,551 restaurants across 15 countries. Features a unique Value Score metric (Avg Rating ÷ Cost) that no other analysis offers.</p>
+          <div class="project-links">
+            <a href="https://github.com/Vijaivarma/Zomato-Restaurant-Analytics" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-<div class="work">
+      <!-- PROJECT 2: ADVENTURE WORKS -->
+      <div class="work">
+        <img src="images/work3.png" alt="Adventure Works Business Intelligence Dashboard">
+        <div class="layer">
+          <div class="project-tags">
+            <span>Power BI</span><span>DAX</span><span>KPIs</span>
+          </div>
+          <h3>Adventure Works Business Dashboard</h3>
+          <p>Complete business intelligence solution covering revenue targets, product performance, customer analytics, and geographic sales mapping.</p>
+          <div class="project-links">
+            <a href="https://github.com/Vijaivarma/Adventure_works_dashboard" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-<img src="images/work1.png" alt="Swiss Job Market Analysis">
+      <!-- PROJECT 3: SWISS JOB MARKET -->
+      <div class="work">
+        <img src="images/work1.png" alt="Swiss Job Market Demand Analysis">
+        <div class="layer">
+          <div class="project-tags">
+            <span>Python</span><span>SQL</span><span>Pandas</span>
+          </div>
+          <h3>Swiss Job Market Demand Analysis</h3>
+          <p>Analyzed job market data to surface in-demand roles, skills, and salary trends. Identified top industries and emerging skill gaps across Swiss sectors.</p>
+          <div class="project-links">
+            <a href="https://github.com/Vijaivarma/Swiss-job-market-demand-analysis" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-<div class="layer">
+      <!-- PROJECT 4: SWISS TOURISM -->
+      <div class="work">
+        <img src="images/work2.png" alt="Swiss Tourism Trend Analysis">
+        <div class="layer">
+          <div class="project-tags">
+            <span>Python</span><span>Matplotlib</span><span>Seaborn</span>
+          </div>
+          <h3>Swiss Tourism Trend Analysis</h3>
+          <p>Analyzed tourism datasets to identify visitor patterns, seasonal trends, and top-performing regions — with forecasting visuals built in Python.</p>
+          <div class="project-links">
+            <a href="https://github.com/Vijaivarma/Swiss_Tourism_Trend_Analysis" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-<h3>Swiss Job Market Demand Analysis</h3>
+    </div>
 
-<p>Analyzed job market data to identify in-demand roles and skills.</p>
+    <a href="https://github.com/Vijaivarma" class="btn btn-outline btn-center" target="_blank">View All Projects on GitHub</a>
 
-<a href="https://github.com/Vijaivarma/Swiss-job-market-demand-analysis" target="_blank" rel="noopener" aria-label="GitHub project link">
-<i class="fab fa-github"></i>
-</a>
-
+  </div>
 </div>
 
-</div>
-
-<div class="work">
-
-<img src="images/work2.png" alt="Swiss Tourism Analysis">
-
-<div class="layer">
-
-<h3>Swiss Tourism Trend Analysis</h3>
-
-<p>Analyzed tourism datasets to identify visitor trends and patterns.</p>
-
-<a href="https://github.com/Vijaivarma/Swiss_Tourism_Trend_Analysis" target="_blank" rel="noopener">
-<i class="fab fa-github"></i>
-</a>
-
-</div>
-
-</div>
-
-<div class="work">
-
-<img src="images/work3.png" alt="Power BI Dashboard">
-
-<div class="layer">
-
-<h3>Interactive Business Dashboard</h3>
-
-<p>Power BI dashboard visualizing business performance metrics.</p>
-
-<a href="https://github.com/Vijaivarma/Adventure_works_dashboard" target="_blank" rel="noopener">
-<i class="fab fa-github"></i>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<a href="https://github.com/Vijaivarma" class="btn" target="_blank">View More Projects</a>
-
-</div>
-
-</div>
-
-<!-- CONTACT -->
+<!-- ============================================================
+     CONTACT
+============================================================ -->
 
 <div id="contact">
+  <div class="container">
+    <div class="row">
 
-<div class="container">
+      <div class="contact-left">
+        <h1 class="sub-title">Let's Work Together</h1>
 
-<div class="row">
+        <p class="contact-intro">Ready to turn your data into decisions? Book a free 30-minute call — I'll show you exactly what your data can reveal.</p>
 
-<div class="contact-left">
+        <!-- PRIMARY CTA — Most important button on this page -->
+        <a href="https://calendly.com/vijaivarma-dataanalyst/30min" target="_blank" class="btn btn-primary btn-block">
+          <i class="fas fa-calendar-alt"></i> Book a Free 30-Min Call
+        </a>
 
-<h1 class="sub-title">Contact Me</h1>
+        <div class="contact-info">
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:vijaivarma.dataanalyst@gmail.com">vijaivarma.dataanalyst@gmail.com</a>
+          </p>
+          <p>
+            <!-- IMPORTANT: Replace 91XXXXXXXXXX with your actual WhatsApp number (country code + number, no spaces or +) -->
+            <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp Me</a>
+          </p>
+        </div>
 
-<p><i class="fas fa-paper-plane"></i> vijaivarma.dataanalyst@gmail.com</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/vijaivarmadataanalyst" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Vijaivarma" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
 
+      </div>
 
+      <div class="contact-right">
+        <form id="contact-form" action="https://formspree.io/f/mnjolrjv" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email Address" required>
+          <textarea name="message" rows="6" placeholder="Tell me about your data challenge..." required></textarea>
+          <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Send Message</button>
+          <p id="form-success" style="display:none;"></p>
+          <p id="form-error" style="display:none;"></p>
+        </form>
+      </div>
 
-<div class="social-icons">
-
-<a href="https://www.linkedin.com/in/vijaivarmadataanalyst" target="_blank">
-<i class="fab fa-linkedin"></i>
-</a>
-
-<a href="https://github.com/Vijaivarma" target="_blank">
-<i class="fab fa-github"></i>
-</a>
-
+    </div>
+  </div>
 </div>
 
-<a href="Vijai_varma_Data_Analyst.pdf" download class="btn btn2">
-Download Resume
-</a>
+<!-- Scroll-to-top button -->
+<button id="scroll-top" onclick="scrollToTop()" aria-label="Scroll to top" title="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
 
-</div>
+<!-- ============================================================
+     FOOTER
+============================================================ -->
 
-<div class="contact-right">
-
-<form action="https://formspree.io/f/mnjolrjv" method="POST">
-
-<input type="text" name="name" placeholder="Your Name" required>
-
-<input type="email" name="email" placeholder="Your Email Address" required>
-
-<textarea name="message" rows="6" placeholder="Write your message here..." required></textarea>
-
-<button type="submit" class="btn btn2">Send Message</button>
-
-</form>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<footer style="text-align:center;padding:20px;background:#080808;color:#aaa;font-size:14px;">
-© 2026 Vijai Varma | Data Analyst Portfolio
+<footer>
+  <p>© 2026 Vijai Varma &nbsp;·&nbsp; Data Analytics Consultant &nbsp;·&nbsp; Tamil Nadu, India</p>
+  <p class="footer-sub">Power BI &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Python &nbsp;·&nbsp; Excel</p>
 </footer>
 
 <script src="script.js"></script>
